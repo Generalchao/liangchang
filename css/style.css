@@ -108,7 +108,7 @@ a{color: var(--main-color)}
 .form-control.loginForm{background-color: rgba(255, 255, 255, 0.9);border-radius: 5px;padding: 30px 0 30px;margin: 0 20px;position: relative;}
 .form-control.loginForm:after{position: absolute;left: 15px;right: 15px;height: 7px;border-radius: 0 0 5px 5px;background-color: rgba(255, 255, 255, 0.5);content: '';bottom: -7px;z-index: -1;}
 .form-control.loginForm .input-group{margin: 0 20px 16px;position: relative}
-.form-control.loginForm .input-group input{width: 100%;box-sizing: border-box;height: 44px;line-height: 44px;padding-left: 48px;padding-right: 10px;font-size: 16px;color: #222;background: transparent;border-radius: 4px;border: 1px solid #CADDEE;}
+.form-control.loginForm .input-group input{width: 100%;box-sizing: border-box;height: 44px;line-height: 44px;padding-left: 48px;padding-right: 10px;font-size: 16px;color: #222;background: transparent;border-radius: 4px;border: 1px solid #CADDEE;-webkit-appearance: none;}
 .form-control.loginForm .input-group img{position: absolute;left: 14px;top: 12px;}
 .login-submit{margin: 40px 20px 30px;}
 .login-submit .btn.btn-primary{background: #86CB63;border: none;width: 100%;display: block;height: 44px;line-height: 44px;border-radius:4px;font-size: 17px;color: #fff;text-align: center;}
@@ -154,7 +154,7 @@ a{color: var(--main-color)}
 
 /* 粮仓 */
 .page_desc{text-align: center;font-size: 15px;line-height: 22px;opacity: .6;color: #fff;padding: 10px;}
-.content_box.bg{background: url('../img/user-Background.png') no-repeat top/contain;overflow: hidden;}
+.content_box.bg{background: url('../img/Background-mini.png') no-repeat top/contain;overflow: hidden;}
 .content_box .item.repository{position: relative;width:calc(50% - 21px);margin: 0 7px 14px 14px;float: left;box-sizing: border-box;padding: 10px 12px 15px;text-align: center;}
 .content_box .item.repository:nth-of-type(2n){margin: 0 14px 14px 7px;}
 .content_box .item.repository .hd{font-weight: 500;font-size: 17px;line-height: 24px;text-align: left;padding-bottom: 8px;color: #8C9AA8;}
@@ -173,7 +173,7 @@ a{color: var(--main-color)}
 .content_box .main_card .info .item .value.b{color: #F65656;}
 .content_box .main_card .info .item .value font{font-size: 14px;}
 table{width: 100%;padding: 14px 10px 0;background-color: #fff;margin-bottom: 14px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);font-size: 14px;line-height: 40px;text-align: center;position: relative;}
-table thead{padding-top:14px;background-color: rgba(232, 232, 232, 0.4);color: #333;}
+table thead{padding-top:14px;background-color: rgba(232, 232, 232, 0.4);color: #8C9AA8;}
 table thead th{background-color:rgba(232, 232, 232, 0.4);}
 table tbody tr{position: relative;}
 table tbody tr td:first-child{color: #8C9AA8;}
