@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>粮仓</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+</head>
+<body>
+	<header class="top_bar">
+		<h1 class="top_title">粮仓</h1>
+		<a class="left_btn" @click="$router.back(-1)"><i class="icon-menu"></i></a>
+		<a class="right_btn"><i class="icon-date"></i></a>
+	</header>
+
+	<div class="content_box" id="repositorylist">
+		<p class="page_desc">* 以下展示平均温度，点击进入查看详情 *</p>
+		<div class="repository item" v-for="item in repositorylist" >
+			<p class="hd">{{item.repository_name}}</p>
+			<p class="temperature" v-bind:class="item.status">{{item.repository_temperature}}℃</p>
+			<div class="more"><span>{{item.repository_min}}℃</span>/<span>{{item.repository_max}}℃</span></div>
+
+		</div> 		 
+	</div>   	
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#repositorylist',
+			data: {
+				repositorylist:[{
+					repository_name:'1号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'2号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'3号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'4号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'5号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'b'                   //"a"代表状态正常，“b”代表温度过高
+				},{
+					repository_name:'6号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'7号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'8号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'9号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'10号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'11号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'12号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'13号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				},{
+					repository_name:'14号仓',
+					repository_temperature:'12.4',
+					repository_min:'11.2',
+					repository_max:'13.5',
+					status:'a'
+				}
+
+				]
+			},
+
+
+
+		})
+
+
+	</script>	
+</body>
+</html>

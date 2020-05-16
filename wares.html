@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>物资库</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+</head>
+<body>
+	<header class="top_bar">
+		<h1 class="top_title">物资库</h1>
+		<a class="left_btn" @click="$router.back(-1)"><i class="icon-menu"></i></a>
+		<a class="right_btn"><i class="icon-search"></i></a>
+	</header>
+
+	<div class="content_box" id="wareslist">
+		<div class="wares item" v-for="item in wareslist" >
+			<p class="hd">{{item.wares_name}}</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">包装规格</span>
+					<span class="value">{{item.wares_guige}}</span>	
+				</div>
+				<div class="cells">
+					<span class="title">包装单位</span>
+					<span class="value">{{item.wares_danwei}}</span>	
+				</div>
+				<div class="cells">
+					<span class="title">期末结存</span>
+					<span class="value">{{item.wares_jiechun}}</span>	
+				</div>
+			</div>
+
+		</div> 		 
+	</div>   	
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#wareslist',
+			data: {
+				wareslist:[{
+					wares_name:'雨鞋42码',
+					wares_guige:'3700*3200',
+					wares_danwei:'双',
+					wares_jiechun:'100.00',
+				},{
+					wares_name:'小推车中号',
+					wares_guige:'3700*3200',
+					wares_danwei:'辆',
+					wares_jiechun:'100.00',
+				},{
+					wares_name:'大号铁锹',
+					wares_guige:'3700*3200',
+					wares_danwei:'把',
+					wares_jiechun:'100.00',
+				},{
+					wares_name:'运输电动车',
+					wares_guige:'3700*3200',
+					wares_danwei:'辆',
+					wares_jiechun:'100.00',
+				},{
+					wares_name:'小推车中号',
+					wares_guige:'3700*3200',
+					wares_danwei:'辆',
+					wares_jiechun:'100.00',
+				}
+
+
+				]
+			},
+
+
+
+		})
+
+
+	</script>	
+</body>
+</html>

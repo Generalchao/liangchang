@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>收购</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+</head>
+<body>
+	<header class="home_top_bar" id="app">
+		<h1 class="top_title">收购</h1>
+		<a class="left_btn" href=""><i class="icon-menu"></i></a>
+		<div id="filter"></div>
+		<div class="filter_box">
+
+			<div class="cell">
+				<van-field
+					readonly
+					clickable
+					:value="value"
+					placeholder="收购季节"
+					@click="showPicker = true"
+				></van-field>
+				<van-popup v-model="showPicker" position="bottom">
+				<van-picker
+					show-toolbar
+					:columns="columns"
+					@cancel="showPicker = false"
+					@confirm="onConfirm"
+				/>
+				</van-popup>
+                <i class="icon-arrow_down"></i>
+            </div>
+
+
+			<div class="cell">
+				<van-field
+					readonly
+					clickable
+					:value="value"
+					placeholder="开始时间"
+					@click="showdatePicker = true"
+				></van-field>
+                <i class="icon-arrow_down"></i>
+            </div>
+
+			<div class="cell">
+				<van-field
+					readonly
+					clickable
+					:value="value"
+					placeholder="结束时间"
+					@click="showdatePicker = true"
+				></van-field>
+                <i class="icon-arrow_down"></i>
+            </div>            
+
+
+			<van-popup v-model="showdatePicker" position="bottom">
+			<van-datetime-picker
+				v-model="currentDate"
+				type="date"
+				:min-date="minDate"
+				@cancel="showdatePicker = false"
+				@confirm="onConfirm2"
+			/>
+			</van-popup>
+
+        </div>
+	</header>
+
+
+	<div class="content_box">
+
+		<div  class="module_hd">
+			<span class="name">徐杭粮管所</span>
+			<span class="info">签约数：<font>0</font>公斤</span>
+		</div>
+
+		<div class="item sp">
+			<p class="hd">商品粮</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<span class="value">4756783</span>	
+				</div>
+				<div class="cells">
+					<span class="title">平均单价</span>
+					<span class="value">2.92</span>	
+				</div>
+			</div>
+		</div>
+
+		<div class="item cb">
+			<p class="hd">储备粮</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<span class="value">4756783</span>	
+				</div>
+				<div class="cells">
+					<span class="title">平均单价</span>
+					<span class="value">2.92</span>	
+				</div>
+			</div>
+		</div>	
+
+		<div  class="module_hd">
+			<span class="name">外岗粮管所</span>
+			<span class="info">签约数：<font>0</font>公斤</span>
+		</div>
+
+		<div class="item sp">
+			<p class="hd">商品粮</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<span class="value">4756783</span>	
+				</div>
+				<div class="cells">
+					<span class="title">平均单价</span>
+					<span class="value">2.92</span>	
+				</div>
+			</div>
+		</div>
+
+		<div class="item cb">
+			<p class="hd">储备粮</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<span class="value">4756783</span>	
+				</div>
+				<div class="cells">
+					<span class="title">平均单价</span>
+					<span class="value">2.92</span>	
+				</div>
+			</div>
+		</div>	
+
+
+	</div>   
+
+	<script type="text/javascript" src="js/picker.city.js" ></script>	
+	<script type="text/javascript">
+
+
+
+
+
+		new Vue({
+			el:'#app',
+		  data() {
+		    return {
+		      value: '',
+		      minDate: new Date(2018, 0, 1),
+		      currentDate: new Date(),
+		      showPicker: false,
+		      showdatePicker: false,
+		      columns: ['春季', '夏季', '秋季', '冬季']
+		    }
+		  },
+		  methods: {
+		    onConfirm(value) {
+		      this.value = value;
+		      this.showPicker = false;
+		    },
+
+		    onConfirm2(value){
+		      // this.value2 = value;
+		      this.showdatePicker = false;
+
+		    }
+		  }
+
+
+		});
+
+
+
+
+
+	</script>	
+</body>
+</html>
