@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>粮仓详情</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+</head>
+<body>
+	<header class="top_bar">
+		<h1 class="top_title">1号粮仓</h1>
+		<a class="left_btn" @click="$router.back(-1)"><i class="icon-back"></i></a>
+	</header>
+
+	<div class="content_box bg" >
+		<div class="main_card">
+			<p class="title">-- 平均温湿度 --</p>
+			<div class="info">
+				<div class="item"><span class="title">外温</span><span class="value a">12.4<font>℃</font></span></div>
+				<div class="item"><span class="title">内温</span><span class="value a">10.7<font>℃</font></span></div>
+				<div class="item"><span class="title">外湿</span><span class="value a">78.8<font>℃</font></span></div>
+				<div class="item"><span class="title">内湿</span><span class="value b">85.4<font>℃</font></span></div>
+			</div>
+		</div>
+
+		<table>
+			<thead>
+			  <tr>
+			    <th>统计</th>
+			    <th>一层</th>
+			    <th>二层</th>
+			    <th>三层</th>
+			    <th>四层</th>
+			  </tr>
+			  </thead>
+			  <tbody>
+				  <tr>
+				    <td>平均</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>最高</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>最低</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>		  	
+			  </tbody>
+
+		</table>
+
+
+		<table border="0">
+			<thead>
+			  <tr>
+			    <th>编号</th>
+			    <th>一层</th>
+			    <th>二层</th>
+			    <th>三层</th>
+			    <th>四层</th>
+			  </tr>
+			  </thead>
+			  <tbody>
+				  <tr>
+				    <td>1号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>2号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>3号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>4号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>5号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>	
+				  <tr>
+				    <td>6号</td>
+				    <td>16.7</td>
+				    <td>14.3</td>
+				    <td>12.4</td>
+				    <td>11.1</td>
+				  </tr>		  	
+			  </tbody>
+
+		</table>
+
+
+
+
+	 
+	</div>   	
+
+</body>
+</html>

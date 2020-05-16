@@ -154,7 +154,7 @@ a{color: var(--main-color)}
 
 /* 粮仓 */
 .page_desc{text-align: center;font-size: 15px;line-height: 22px;opacity: .6;color: #fff;padding: 10px;}
-#repositorylist{background: url('../img/user-Background.png') no-repeat top/contain;overflow: hidden;}
+.content_box.bg{background: url('../img/user-Background.png') no-repeat top/contain;overflow: hidden;}
 .content_box .item.repository{position: relative;width:calc(50% - 21px);margin: 0 7px 14px 14px;float: left;box-sizing: border-box;padding: 10px 12px 15px;text-align: center;}
 .content_box .item.repository:nth-of-type(2n){margin: 0 14px 14px 7px;}
 .content_box .item.repository .hd{font-weight: 500;font-size: 17px;line-height: 24px;text-align: left;padding-bottom: 8px;color: #8C9AA8;}
@@ -162,5 +162,19 @@ a{color: var(--main-color)}
 .content_box .item.repository .temperature:after{position: absolute;content: '';bottom: 8px;background: #BFC7D0;left: 32px;right: 32px;height: 1px;opacity: .5;}
 .content_box .item.repository .temperature.b{color: #F65656;}
 .content_box .item.repository .more{font-size: 12px;line-height: 17px;color: #A3ACB6;}
+
+/* 粮仓详情 */
+.content_box .main_card{margin: 14px;text-align: center;background: #fff;border-radius: 6px;box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.04);padding-bottom: 12px;}
+.content_box .main_card .title{color: #8C9AA8;font-weight: 500;font-size: 14px;line-height: 22px;padding:12px ;}
+.content_box .main_card .info{overflow: hidden;}
+.content_box .main_card .info .item{box-shadow: none;border-radius: 0;margin: 0;width: 50%;float: left;background-color: transparent;box-sizing: border-box;}
+.content_box .main_card .info .item .title{display: block;font-weight: 500;font-size: 14px;line-height: 22px;padding:0;}
+.content_box .main_card .info .item .value{font-weight: 600;font-size: 26px;line-height: 39px;color: var(--main-color);font-family: Oduda;}
+.content_box .main_card .info .item .value.b{color: #F65656;}
+.content_box .main_card .info .item .value font{font-size: 14px;}
+table{width: 100%;padding-top: 14px;background-color: #fff;margin-bottom: 14px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);font-size: 14px;}
+table thead{padding-top:14px;line-height: 40px;background-color: #E8E8E8;color: #333;}
+table thead th{background-color:#E8E8E8 }
+
 
 
