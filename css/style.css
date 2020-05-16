@@ -172,9 +172,14 @@ a{color: var(--main-color)}
 .content_box .main_card .info .item .value{font-weight: 600;font-size: 26px;line-height: 39px;color: var(--main-color);font-family: Oduda;}
 .content_box .main_card .info .item .value.b{color: #F65656;}
 .content_box .main_card .info .item .value font{font-size: 14px;}
-table{width: 100%;padding-top: 14px;background-color: #fff;margin-bottom: 14px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);font-size: 14px;}
-table thead{padding-top:14px;line-height: 40px;background-color: #E8E8E8;color: #333;}
-table thead th{background-color:#E8E8E8 }
+table{width: 100%;padding: 14px 10px 0;background-color: #fff;margin-bottom: 14px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);font-size: 14px;line-height: 40px;text-align: center;position: relative;}
+table thead{padding-top:14px;background-color: rgba(232, 232, 232, 0.4);color: #333;}
+table thead th{background-color:rgba(232, 232, 232, 0.4);}
+table tbody tr{position: relative;}
+table tbody tr td:first-child{color: #8C9AA8;}
+table tbody tr td{border-bottom: 1px solid rgba(202, 202, 202, 0.4);}
+table tbody tr td.b{color: #F65656;}
+
 
 
 
