@@ -50,7 +50,7 @@
                 <i class="icon-arrow_down"></i>
             </div>           
 
-			<van-calendar color="#2472F9" v-model="show" type="range" @confirm="onConfirm" />
+			<van-calendar color="#2472F9" v-model="show" type="range" @confirm="onConfirm2" />
 
         </div>
 	</header>
@@ -139,12 +139,12 @@
 		  data() {
 		    return {
 		      value: '',
+		      date: '',
 		      minDate: new Date(2018, 0, 1),
 		      currentDate: new Date(),
 		      showPicker: false,
-		      columns: ['春季', '夏季', '秋季', '冬季'],
-		      date: '',
 		      show: false,
+		      columns: ['春季', '夏季', '秋季', '冬季'],
 		    }
 		  },
 		  methods: {
@@ -157,7 +157,7 @@
 			      return `${date.getMonth() + 1}/${date.getDate()}`;
 		    },
 
-		    onConfirm(date) {
+		    onConfirm2(date) {
 			      const [start, end] = date;
 			      this.show = false;
 			      this.date = `${this.formatDate(start)} - ${this.formatDate(end)}`;
