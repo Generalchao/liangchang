@@ -108,10 +108,10 @@ a{color: var(--main-color)}
 .mine .menu .item{background: #fff;border-radius: 4px;box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.04);margin-bottom: 16px;line-height: 60px;padding: 0 16px;color: #737B91;font-size: 16px;position: relative;}
 .mine .menu .item:after{position: absolute;font-family: 'operations';content: '\e906';color: ##8C9AA8;right: 16px;font-size: 16px;}
 .mine .menu .item i{font-size: 18px;padding-right: 16px;vertical-align: text-bottom;}
-.mine .menu .item .icon-jiankong{color: #338AFF;}
-.mine .menu .item .icon-liangchang{color: #FFA900;}
-.mine .menu .item .icon-wuzhi{color: #6ABF40;}
-.mine .menu .item .icon-shougou{color: #F65656;}
+.mine .menu .item .icon-setting{color: #338AFF;}
+.mine .menu .item .icon-feedback{color: #FFA900;}
+.mine .menu .item .icon-password_02{color: #6ABF40;}
+.mine .menu .item .icon-quit{color: #F65656;}
 
 /* 收购 */
 .module_hd{padding: 20px 14px 0;color: #6B738B;position: relative;}
