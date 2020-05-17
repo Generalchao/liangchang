@@ -15,7 +15,7 @@
 <body>
 	<header class="top_bar" id="app">
 		<h1 class="top_title">粮仓</h1>
-		<a class="left_btn" @click="$router.back(-1)"><i class="icon-menu"></i></a>
+		<a class="left_btn" href="home.html"><i class="icon-menu"></i></a>
 		<a class="right_btn" @click="show = true"><i class="icon-date"></i></a>
 
 		<van-calendar color="#2472F9"  v-model="show" @confirm="onConfirm" />

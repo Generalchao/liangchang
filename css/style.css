@@ -96,11 +96,11 @@ a{color: var(--main-color)}
 .home .title font{color: rgba(255, 255, 255, 0.5);font-weight: normal;}
 .home .item{background: rgba(255, 255, 255, 0.2);border-radius: 4px;color: #fff;text-align: center;padding: 22px 0 18px;margin: 5px;width: calc((100vw - 30px) / 2);display: inline-block;float: left;}
 .home .item i{color: #fff;display: block;font-size: 40px;}
-.home .item span{display: block;font-size: 17px;font-weight: normal;padding-top: 16px;}
+.home .item span{display: block;font-size: 17px;font-weight: normal;padding-top: 16px;color: #fff;}
 
 /* 个人中心 */
 .mine .top_bar{height: 300px;}
-.mine .top_bar .info{position: absolute;width: 100%;padding-top: 114px;color: #fff;}
+.mine .top_bar .info{position: absolute;width: 100%;padding-top: 114px;color: #fff;z-index: -1;}
 .mine .top_bar .avatar{padding-bottom: 10px;}
 .mine .top_bar .user-name{font-size: 20px;line-height: 28px;font-weight: 600;padding-bottom: 2px;}
 .mine .top_bar .user-id{opacity: .7;font-size: 14px;}
