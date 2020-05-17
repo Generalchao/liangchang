@@ -5,12 +5,12 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
 	<!-- 引入样式文件 -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.2/lib/index.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 
 	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vant@2.2/lib/vant.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
 </head>
 <body>
 	<header class="home_top_bar" id="app">
@@ -43,34 +43,14 @@
 				<van-field
 					readonly
 					clickable
-					:value="value"
-					placeholder="开始时间"
-					@click="showdatePicker = true"
+					:value="date"
+					placeholder="开始与结束时间"
+					@click="show = true"
 				></van-field>
                 <i class="icon-arrow_down"></i>
-            </div>
+            </div>           
 
-			<div class="cell">
-				<van-field
-					readonly
-					clickable
-					:value="value"
-					placeholder="结束时间"
-					@click="showdatePicker = true"
-				></van-field>
-                <i class="icon-arrow_down"></i>
-            </div>            
-
-
-			<van-popup v-model="showdatePicker" position="bottom">
-			<van-datetime-picker
-				v-model="currentDate"
-				type="date"
-				:min-date="minDate"
-				@cancel="showdatePicker = false"
-				@confirm="onConfirm2"
-			/>
-			</van-popup>
+			<van-calendar color="#2472F9" v-model="show" type="range" @confirm="onConfirm" />
 
         </div>
 	</header>
@@ -162,8 +142,9 @@
 		      minDate: new Date(2018, 0, 1),
 		      currentDate: new Date(),
 		      showPicker: false,
-		      showdatePicker: false,
-		      columns: ['春季', '夏季', '秋季', '冬季']
+		      columns: ['春季', '夏季', '秋季', '冬季'],
+		      date: '',
+		      show: false,
 		    }
 		  },
 		  methods: {
@@ -172,11 +153,17 @@
 		      this.showPicker = false;
 		    },
 
-		    onConfirm2(value){
-		      // this.value2 = value;
-		      this.showdatePicker = false;
+			formatDate(date) {
+			      return `${date.getMonth() + 1}/${date.getDate()}`;
+		    },
 
-		    }
+		    onConfirm(date) {
+			      const [start, end] = date;
+			      this.show = false;
+			      this.date = `${this.formatDate(start)} - ${this.formatDate(end)}`;
+		    },
+
+
 		  }
 
 
