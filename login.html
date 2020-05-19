@@ -12,11 +12,11 @@
 	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
 </head>
-<body class="login" id="app">
+<body class="login">
 
 	<h1 class="title">欢迎登录</h1>
 
-	<form class="form-control loginForm">
+	<form class="form-control loginForm"  id="app">
 		<div class="input-group">
 			<img src="img/users.svg">
             <input type="text" placeholder="请输入用户名">
@@ -26,13 +26,31 @@
 	        <input type="password"  placeholder="请输入密码">
 	    </div>
 	    <div class="login-submit">
-            <button type="button" class="btnLogin btn btn-primary">登录</button>
+            <button type="button" class="btnLogin btn btn-primary" @click="onClickConfirm">登录</button>
         </div>
 	</form>
 
 
 
-	
+<script>
 
+new Vue({
+	el:'#app',
+	methods: {
+
+	onClickConfirm() {
+	    this.$notify({
+		  message: '用户名不能为空！',
+		  color: '#F45858',
+		  background: 'rgba(255,255,255,.7)',
+		});
+	  },
+
+  }
+
+});
+ Notify('通知内容');
+Vue.use(vant.Lazyload);
+</script>
 </body>
 </html>
