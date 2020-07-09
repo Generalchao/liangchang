@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>仓库监控</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<header class="top_bar">
+		<div class="switchType">
+			<a href="video_daolu.html" >道路</a>
+			<a href="video_changku.html" class="active">仓库</a>
+		</div>		
+		<a class="left_btn" href="home.html"><i class="icon-menu"></i></a>
+	</header>
+
+<div class="content_box" id="videolist">
+	<div class="video item"  v-for="item in videolist" >
+		<img class="video_img" :src="item.video_img">
+		<p class="video_title">{{item.video_title}}</p>
+	</div>
+</div>
+
+
+
+	<script type="text/javascript">
+
+		var app = new Vue({
+			el: '#videolist',
+			data: {
+				videolist:[{
+					video_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594265636027&di=951ab80cff96bfc10cc8477e6be7c9db&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D1175179067%2C2902739431%26fm%3D214%26gp%3D0.jpg',
+					video_title:'视频标题01'
+				},{
+					video_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594265674435&di=4840ff9c71ddfd1b67010e19716fa898&imgtype=0&src=http%3A%2F%2Fpicture.ik123.com%2Fuploads%2Fallimg%2F180330%2F4-1P330160644.jpg',
+					video_title:'视频标题02'
+				},{
+					video_img:'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3599690714,1456928921&fm=11&gp=0.jpg',
+					video_title:'视频标题03'
+				},{
+					video_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594265792849&di=86ceb6d64eaa43e1ba52c5ae07f8cc15&imgtype=0&src=http%3A%2F%2Fimg2.imgtn.bdimg.com%2Fit%2Fu%3D1268994922%2C1422433932%26fm%3D214%26gp%3D0.jpg',
+					video_title:'视频标题04'
+				},{
+					video_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594265814391&di=9e7f5ff0e31dc9287ffe9b24e156255e&imgtype=0&src=http%3A%2F%2Fyouimg1.c-ctrip.com%2Ftarget%2Ftg%2F571%2F100%2F395%2F6f3ff169bc124d51bca610172021eebd.jpg',
+					video_title:'视频标题05'
+				},{
+					video_img:'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1594265826904&di=1b9f3e899bd5fd87b26169e34589bd5f&imgtype=0&src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fsoftbbs%2F1003%2F07%2Fc0%2F3134443_1267900790753_1024x1024soft.jpg',
+					video_title:'视频标题06'
+				}
+
+				]
+
+			},
+		})
+
+	</script>	
+
+</body>
+</html>
