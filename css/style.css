@@ -162,4 +162,7 @@ table tbody tr td.b{color: #F65656;}
 .content_box .item.video:nth-of-type(2n){margin: 14px 14px 0 7px;}
 .content_box .item .video_img{height: 30vw;width: 100%;object-fit: cover;}
 .content_box .item .video_title{font-size: 14px;color: #333;padding:14px 10px 16px;}
+.video_detail {background-color: #000;}
+.video_detail .top_bar{background: rgba(255, 255, 255, .1)}
+.viedo_content{padding-top: 27vh;}
 
