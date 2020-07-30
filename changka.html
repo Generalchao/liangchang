@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>粮食仓卡</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+	<!-- 引入样式文件 -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vant@2.8/lib/index.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- 引入 Vue 和 Vant 的 JS 文件 -->
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/vant@2.8/lib/vant.min.js"></script>
+</head>
+<body>
+	<header class="top_bar">
+		<h1 class="top_title">粮食仓卡</h1>
+		<a class="left_btn" href="home.html"><i class="icon-menu"></i></a>
+		<a class="right_btn"><i class="icon-search"></i></a>
+	</header>
+
+	<div class="content_box" id="storageinfolist">
+		<div class="storageinfo item" v-for="item in storageinfolist" >
+			<p class="hd">{{item.storageinfo_name}}</p>
+			<div class="info">
+				<div class="cells">
+					<span class="title">额定仓容</span>
+					<span class="value">{{item.storageinfo_cubage}}</span>	
+				</div>
+				<div class="cells">
+					<span class="title">品&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;种</span>
+					<span class="value">{{item.storageinfo_variety}}</span>	
+				</div>
+				<div class="cells">
+					<span class="title">数&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;量</span>
+					<span class="value">{{item.storageinfo_amount}}</span>	
+				</div>
+				<div class="cells">
+					<span class="title">进仓时间</span>
+					<span class="value">{{item.storageinfo_date}}</span>	
+				</div>
+			</div>
+
+		</div> 		 
+	</div>   	
+
+	<script type="text/javascript">
+		var app = new Vue({
+			el: '#storageinfolist',
+			data: {
+				storageinfolist:[{
+					storageinfo_name:'1号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2018.11',
+				},{
+					storageinfo_name:'2号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2018.11',
+				},{
+					storageinfo_name:'3号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2018.07',
+				},{
+					storageinfo_name:'4号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2018.08',
+				},{
+					storageinfo_name:'5号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2019.03',
+				},{
+					storageinfo_name:'6号仓',
+					storageinfo_cubage:'2998吨',
+					storageinfo_variety:'粳稻谷',
+					storageinfo_amount:'2052.858吨',
+					storageinfo_date:'2019.01',
+				},
+
+
+				]
+			},
+
+
+
+		})
+
+
+	</script>	
+</body>
+</html>
