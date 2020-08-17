@@ -92,8 +92,8 @@ a{color: var(--main-color)}
 
 /* 菜单页 */
 .home .menu{padding: 5px;overflow: hidden;}
-.home .title{color: #fff;font-size: 22px;line-height: 31px;font-weight: 800;padding:10vh 20px 30px;}
-.home .title font{color: rgba(255, 255, 255, 0.5);font-weight: normal;}
+.home .title, .login .title{color: #fff;font-size: 22px;line-height: 31px;font-weight: 800;padding:10vh 20px 30px;}
+.home .title font, .login .title font{color: rgba(255, 255, 255, 0.5);font-weight: normal;}
 .home .item{background: rgba(255, 255, 255, 0.2);border-radius: 4px;color: #fff;text-align: center;padding: 22px 0 18px;margin: 5px;width: calc((100vw - 30px) / 2);display: inline-block;float: left;}
 .home .item i{color: #fff;display: block;font-size: 40px;}
 .home .item span{display: block;font-size: 17px;font-weight: normal;padding-top: 16px;color: #fff;}
