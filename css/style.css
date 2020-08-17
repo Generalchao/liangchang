@@ -3,7 +3,8 @@
 :root{--main-color:#2472F9;--primary-dark:#6B738B;}
 *{font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;outline: 0;-webkit-tap-highlight-color: transparent;-webkit-tap-highlight-color: transparent;margin: 0;padding: 0;}
 .whitebg{background-color: #fff;}
-body{background-color: #F3F3F3;}
+body{background-color: #F3F3F3;scrollbar-width: none;-ms-overflow-style: none;}
+body::-webkit-scrollbar{display: none}
 a{color: var(--main-color)}
 .home_top_bar{height: 114px;position: fixed;z-index: 7;top:0;right: 0;left: 0;background:#fff url('../img/user-Background.png') no-repeat top/cover;text-align: center;}
 .top_bar{height: 44px;position: fixed;z-index: 7;top:0;right: 0;left: 0;background:#fff url('../img/user-Background.png') no-repeat top/cover;text-align: center;}
